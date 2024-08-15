@@ -7,9 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-/**
- * Unit test for simple App.
- */
 public class LandingPage
 {
     private WebDriver driver;
