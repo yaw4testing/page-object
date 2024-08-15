@@ -14,10 +14,10 @@ public class LandingPage
     public LandingPage(WebDriver driver){
         this.driver = driver;
     }
-    By header = By.className("login_logo");
-    By userName = By.id("user-name");
-    By password = By.cssSelector("input[type=\"password\" i]");
-    By submitButton = By.id("login-button");
+        By header = By.className("login_logo");
+        By userName = By.id("user-name");
+        By password = By.cssSelector("input[type=\"password\" i]");
+        By submitButton = By.id("login-button");
     @Test
     public void gettingHeader()
     {
