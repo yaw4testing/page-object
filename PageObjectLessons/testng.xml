@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/emman/IdeaProjects/page-object/PageObjectLessons">
+        <classes>
+            <class name="PageObjectModel.LandingPage">
+                <methods><include name="gettingHeader"/>
+                </methods>
+            </class>
+            <class name="PageObjectModel.MainSetup">
+                <methods><include name="submitDetails"/>
+                    <include name="buyStuff"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
