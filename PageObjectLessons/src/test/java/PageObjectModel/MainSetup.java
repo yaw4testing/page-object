@@ -11,26 +11,30 @@ public class MainSetup {
     private WebDriver driver;
     LandingPage landingPage;
     PageFactoryLessons pageFactoryLessons;
+
     @BeforeTest
-    public void setUpThings(){
+    public void setUpThings() {
         driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(300));
     }
-    @Test //pageobject implementation
-    public void submitDetails(){
+
+    @Test // pageobject implementation
+    public void submitDetails() {
         landingPage = new LandingPage(driver);
         landingPage.gettingHeader();
         landingPage.enterUserna();
         landingPage.enterPasswd();
         landingPage.clickOnLogin();
     }
-    @Test(priority = 1) //pagefactory implementation
-    public void buyStuff(){
+
+    @Test(priority = 1) // pagefactory implementation
+    public void buyStuff() {
         pageFactoryLessons = new PageFactoryLessons(driver);
         pageFactoryLessons.getTitle();
         pageFactoryLessons.add_back_pack();
+        driver.close();
     }
 
 }

@@ -10,18 +10,20 @@ public class PageFactoryLessons {
     WebDriver driver;
     @FindBy(xpath = "//div[@class=\"header_secondary_container\"]/span[@class=\"title\"]")
     WebElement title;
-    @FindBy(id="item_4_title_link")
+    @FindBy(id = "item_4_title_link")
     WebElement back_pack;
 
-    public PageFactoryLessons(WebDriver driver){
+    public PageFactoryLessons(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
-    public void getTitle(){
+
+    public void getTitle() {
         String get_title = title.getText();
-        Assert.assertEquals(get_title,"Products");
+        Assert.assertEquals(get_title, "Products");
     }
-    public void add_back_pack(){
+
+    public void add_back_pack() {
         back_pack.click();
     }
 }
