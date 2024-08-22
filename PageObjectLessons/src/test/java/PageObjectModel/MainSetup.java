@@ -24,7 +24,7 @@ public class MainSetup {
     public void submitDetails() {
         landingPage = new LandingPage(driver);
         landingPage.gettingHeader();
-        landingPage.enterUserna();
+        landingPage.enterUsername();
         landingPage.enterPasswd();
         landingPage.clickOnLogin();
     }
