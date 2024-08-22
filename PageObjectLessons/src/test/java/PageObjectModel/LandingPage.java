@@ -18,15 +18,10 @@ public class LandingPage
         By userName = By.id("user-name");
         By password = By.cssSelector("input[type=\"password\" i]");
         By submitButton = By.id("login-button");
-    @Test
-    public void gettingHeader()
-    {
-       String getHeader = driver.findElement(header).getText();
-        Assert.assertEquals("Swag Labs",getHeader);
-    }
-
     public void enterUserna(){
+
         driver.findElement(userName).sendKeys("standard_user");
+        Assert.assertEquals(driver.findElement(userName).getText(), "anything");
     }
     public void enterPasswd(){
         driver.findElement(password).sendKeys("secret_sauce");
